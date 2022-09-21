@@ -18,7 +18,7 @@ const AdminPage = () => {
     return (
         <>
             <Head>
-                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async></script>
             </Head>
 
             <CMS />
