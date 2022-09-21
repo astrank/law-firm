@@ -20,7 +20,7 @@ export default function Home({ posts }) {
 
             <main className="flex flex-col gap-8 text-primary">
                 {/* LANDING */}
-                <section className="relative flex flex-col gap-4 py-36 bg-gradient-to-r from-cyan-500 to-blue-500 mb-10">
+                <section className="relative flex flex-col gap-4 py-36 mb-10">
                     <div className="z-10 flex flex-col gap-6 px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32">
                         <div>
                             <span className="text-white font-medium md:text-lg">SIRVIENDO EN ROSARIO</span>
@@ -35,7 +35,7 @@ export default function Home({ posts }) {
                             <button className="bg-accent text-white text-sm font-medium px-6 py-4 rounded border-b border-accent_darkest self-start">CONSULTAS</button>
                         </div>
                     </div>
-                    <Image className="z-0" src="/assets/images/ali-morshedlou-WMD64tMfc4k-unsplash 2.png" layout="fill" objectPosition="right center" objectFit="cover" alt="image" />
+                    <Image className="z-0" src="/assets/images/ali-morshedlou-WMD64tMfc4k-unsplash2.png" layout="fill" objectPosition="right center" objectFit="cover" alt="image" />
                 </section>
 
                 {/* AREAS */}
