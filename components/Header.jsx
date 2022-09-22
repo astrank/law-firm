@@ -39,7 +39,7 @@ export default function Header() {
                             </a>
                         </li>
                     </ul>
-                    <a className="bg-accent text-white py-4 px-6 md:px-8 font-bold text-sm" href="#contacto">AGENDAR CONSULTA</a>
+                    <a className="bg-accent text-white py-4 px-6 md:px-8 font-semibold md:font-bold text-xs md:text-sm" href="#contacto">AGENDAR CONSULTA</a>
                 </div>
             </div>
             <div className="flex justify-between items-center py-8 px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32">

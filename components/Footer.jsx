@@ -1,15 +1,17 @@
 export default function Footer() {
     return (
-        <footer className="grid grid-rows-2 px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32 md:grid-rows-none md:grid-cols-2 gap-14 md:gap-0 justify-center text-primary bg-darkest text-white py-14">
+        <footer className="grid grid-rows-2 px-4 gap-14 sm:px-10 md:px-14 lg:px-18 xl:px-32 md:grid-rows-none md:grid-cols-2 md:gap-10 justify-center text-primary bg-darkest text-white py-14">
             <div className="flex flex-col gap-6">
                 <h1 className="font-bold text-4xl uppercase">Logo</h1>
                 <p className="text-sm text-gray-400 max-w-md leading-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum. Minus voluptate vitae distinctio aspernatur libero, pariatur amet</p>
                 <div className="flex items-center gap-2">
                     <a href="" className="text-sm font-medium text-accent">Saber mas</a>
-                    <img className="h-3" src="assets/arrow-right.svg" />
+                    <svg className="h-5 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
                 </div>
             </div>      
-            <div className="flex gap-14 -order-1 md:order-2">
+            <div className="flex flex-col lg:flex-row gap-14 -order-1 md:order-2">
                 <div className="flex flex-col gap-6">
                     <h3 className="text-lg font-semibold">Contacto</h3>
                     <div className="flex items-center gap-4">
