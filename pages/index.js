@@ -35,7 +35,7 @@ export default function Home({ posts }) {
                             <button className="bg-accent text-white text-sm font-medium px-6 py-4 rounded border-b border-accent_darkest self-start">CONSULTAS</button>
                         </div>
                     </div>
-                    <Image className="z-0" src="/assets/images/ali-morshedlou-WMD64tMfc4k-unsplash2.png" layout="fill" objectPosition="right center" objectFit="cover" alt="image" />
+                    <Image className="z-0" src="/assets/images/ali-morshedlou-WMD64tMfc4k-unsplash2.png" layout="fill" objectPosition="right center" objectFit="cover" priority alt="image" />
                 </section>
 
                 {/* AREAS */}
