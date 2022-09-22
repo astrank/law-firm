@@ -27,7 +27,7 @@ export default function Home({ posts }) {
                             <span className="text-white font-medium text-base md:text-lg">SIRVIENDO EN ROSARIO</span>
                             <div className="mt-1">
                                 <h1 className="text-white text-4xl md:text-6xl font-bold font-merriweather">Castillo-Milanesi</h1>
-                                <hr className="divider mt-2" />
+                                <hr className="divider mt-2 border-0" />
                             </div>
                         </div>
                         <p className="text-gray-400 max-w-xl leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit amet accusantium reprehenderit officia, voluptatem nesciunt ipsa hic voluptates obcaecati</p>
