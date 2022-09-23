@@ -36,7 +36,7 @@ export default function Home({ posts }) {
                             <button className="bg-accent text-white text-sm font-medium px-6 py-4 rounded border-b border-accent_darkest self-start">CONSULTAS</button>
                         </div>
                     </div>
-                    <Image className="z-0" src="/assets/images/ali-morshedlou-WMD64tMfc4k-unsplash2.png" layout="fill" objectPosition="right center" objectFit="cover" priority alt="Landing image" />
+                    <Image className="z-0" src="/assets/images/ali-morshedlou-WMD64tMfc4k-unsplash2.jpeg" layout="fill" objectPosition="right center" objectFit="cover" priority alt="Landing image" />
                 </section>
 
                 {/* AREAS */}
@@ -88,10 +88,10 @@ export default function Home({ posts }) {
                         <hr className="divider mt-2 mx-auto" />
                     </div>
                     <div className="grid grid-rows-4 gap-8 md:grid-rows-none md:grid-cols-2 xl:grid-cols-4">
-                        <Profesional nombre="Dr. Silvio Milanesi" profesion="ABOGADO" img="/assets/images/brian-tromp-oyoKfOhYtZI-unsplash.jpg" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum." />
-                        <Profesional nombre="Dr. Silvio Milanesi" profesion="ABOGADO" img="/assets/images/brian-tromp-MxkYQ39KFmE-unsplash.jpg" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum." />
-                        <Profesional nombre="Dr. Silvio Milanesi" profesion="ABOGADO" img="/assets/images/brian-tromp-mw4u9Qm6CHQ-unsplash.jpg" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum." />
-                        <Profesional nombre="Dr. Silvio Milanesi" profesion="ABOGADO" img="/assets/images/brian-tromp-Kepb83eqqOk-unsplash.jpg" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum." />
+                        <Profesional nombre="Dr. Silvio Milanesi" profesion="ABOGADO" img="/assets/images/brian-tromp-oyoKfOhYtZI-unsplash.jpeg" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum." />
+                        <Profesional nombre="Dr. Silvio Milanesi" profesion="ABOGADO" img="/assets/images/brian-tromp-MxkYQ39KFmE-unsplash.jpeg" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum." />
+                        <Profesional nombre="Dr. Silvio Milanesi" profesion="ABOGADO" img="/assets/images/brian-tromp-mw4u9Qm6CHQ-unsplash.jpeg" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum." />
+                        <Profesional nombre="Dr. Silvio Milanesi" profesion="ABOGADO" img="/assets/images/brian-tromp-Kepb83eqqOk-unsplash.jpeg" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum." />
                     </div>
                 </section>
 
