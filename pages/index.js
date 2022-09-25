@@ -5,8 +5,10 @@ import Header from "../components/Header";
 import Profesional from "../components/Profesional";
 import Publicacion from "../components/Publicacion";
 import * as Accordion from "@radix-ui/react-accordion";
+import { useState } from "react";
 
 export default function Home({ posts }) {
+    const [isContentReady, setContentReady] = useState(false);
     return (
         <div className="font-poppins">
             <Head>
@@ -17,7 +19,7 @@ export default function Home({ posts }) {
 
             <Header />
 
-            <main className="flex flex-col gap-8 text-primary">
+            <main className={`${!isContentReady ? 'hidden' : 'flex flex-col gap-8 text-primary'}`}>
                 {/* LANDING */}
                 <section className="relative flex flex-col gap-4 py-20 md:py-36 mb-10">
                     <div className="z-10 flex flex-col gap-6 px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32">
@@ -54,6 +56,7 @@ export default function Home({ posts }) {
                         objectFit="cover"
                         priority
                         alt="Landing image"
+                        onLoadingComplete={() => setContentReady(!isContentReady)}
                     />
                 </section>
 
