@@ -48,7 +48,7 @@ export default function Home({ posts }) {
                     </div>
                     <Image
                         className="z-0 animate-fade_in"
-                        src="/assets/images/ali-morshedlou-WMD64tMfc4k-unsplash2.jpeg"
+                        src="/assets/images/ali-morshedlou-WMD64tMfc4k-unsplash2.webp"
                         layout="fill"
                         objectPosition="right center"
                         objectFit="cover"
