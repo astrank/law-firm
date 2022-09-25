@@ -39,37 +39,35 @@ export default function Header() {
                             </a>
                         </li>
                     </ul>
-                    <a className="bg-accent text-white py-4 px-6 md:px-8 font-semibold md:font-bold text-xs md:text-sm" href="#contacto">AGENDAR CONSULTA</a>
+                    <a className="bg-accent text-white py-4 px-6 border-b border-accent_darkest md:px-8 font-semibold md:font-bold text-xs md:text-sm hover:bg-accent_light hover:border-accent" href="#contacto">AGENDAR CONSULTA</a>
                 </div>
             </div>
-            <div className="flex justify-between items-center py-8 px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32">
+            <div className="relative flex justify-between items-center py-8">
                 <Link href="/">
-                    <a className="text-5xl font-bold uppercase">Home</a>
+                    <a className="text-5xl font-bold uppercase ml-4 sm:ml-10 md:ml-14 lg:ml-18 xl:ml-32">Home</a>
                 </Link>
-                {/*<Image
-                    src="/example2.png"
-                    width={170}
-                    height={90}
-                    alt="logo"
-                />*/}
-                <nav>
-                    <ul aria-label="Primary" role="list" className="hidden lg:flex gap-8 font-medium text-sm text-gray-700">
-                        <a href="#publicaciones">
+                <button className="h-6 lg:hidden cursor-pointer mr-4 sm:mr-10 md:mr-14 lg:mr-18 xl:mr-32" aria-expanded="false" onClick={() => setIsNavToggled(!isNavToggled)}>
+                    {!isNavToggled &&
+                    <svg aria-hidden="false" className="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>}
+                    {isNavToggled &&
+                    <svg aria-hidden="true" className="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>}
+                    <span className="hidden">Menu</span>
+                </button>
+                <nav className={`${isNavToggled ? 'block absolute bg-white py-4 z-20 w-full top-20 px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32' : 'hidden'} lg:block lg:mr-18 xl:mr-32`}>
+                    <ul aria-label="Primary" role="list" className={`flex flex-col lg:flex-row lg:gap-8 font-medium text-sm text-accent lg:text-custom_gray`}>
+                        <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent" href="#publicaciones">
                             <li>Publicaciones</li>
                         </a>
-                        <a href="#contacto">
+                        <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent" href="#contacto">
                             <li>Contacto</li>
                         </a>
-                        <a href="#profesionales">
+                        <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent" href="#profesionales">
                             <li>Profesionales</li>
                         </a>
-                        <a href="#areas-de-actuacion">
+                        <a className="py-3 lg:py-0 lg:hover:text-accent" href="#areas-de-actuacion">
                             <li>Areas de Actuación</li>
                         </a>
                     </ul>
-                    <a href="">
-                        <svg className="h-6 lg:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                    </a>
                 </nav>
             </div>
         </header>

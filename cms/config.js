@@ -15,7 +15,7 @@ module.exports = {
             name: "posts",
             folder: "/public/data/posts",
             create: true,
-            identifier_field: "slug",
+            identifier_field: "title",
             format: "json",
             fields: [
                 { label: "Titulo", name: "title", widget: "string" },
@@ -23,6 +23,13 @@ module.exports = {
                 {
                     label: "Autor", name: "author", widget: "relation",
                     collection: "authors",
+                    search_fields: ["name"],
+                    display_fields: ["name"],
+                    value_field: "name"
+                },
+                {
+                    label: "Categoría", name: "category", widget: "relation",
+                    collection: "categories",
                     search_fields: ["name"],
                     display_fields: ["name"],
                     value_field: "name"
@@ -42,7 +49,18 @@ module.exports = {
         {
             label: "Autores",
             name: "authors",
-            folder: "/public/data/authors",
+            folder: "public/data/authors",
+            create: true,
+            identifier_field: "name",
+            format: "json",
+            fields: [
+                { label: "Nombre", name: "name", widget: "string" }
+            ]
+        },
+        {
+            label: "Categorías",
+            name: "categories",
+            folder: "public/data/categories",
             create: true,
             identifier_field: "name",
             format: "json",

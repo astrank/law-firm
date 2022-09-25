@@ -5,7 +5,7 @@ export default function Profesional(props) {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
-        <div className="flex flex-col gap-6 relative">
+        <div className="animate-fade flex flex-col gap-6 relative">
             {/* relative w-full h-48 */}
             <div className={`aspect-h-2 aspect-w-3 xl:aspect-w-8 xl:aspect-h-6 w-full overflow-hidden bg-gray-200`}>
                 <Image src={props.img} layout="fill" objectFit="cover" alt="image" onLoadingComplete={() => setIsLoading(false)} />

@@ -68,6 +68,11 @@ svg {
   }
 }
 
+::selection {
+  color: #fff;
+  background-color: #AD9263;
+}
+
 .divider {
   height: 4px;
   width: 50px;
