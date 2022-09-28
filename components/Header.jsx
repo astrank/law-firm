@@ -39,7 +39,9 @@ export default function Header() {
                             </a>
                         </li>
                     </ul>
-                    <a className="bg-accent text-white py-4 px-6 border-b border-accent_darkest md:px-8 font-semibold md:font-bold text-xs md:text-sm hover:bg-accent_light hover:border-accent" href="/contacto">AGENDAR CONSULTA</a>
+                    <Link href="/contacto">
+                        <a className="bg-accent text-white py-4 px-6 border-b border-accent_darkest md:px-8 font-semibold md:font-bold text-xs md:text-sm hover:bg-accent_light hover:border-accent">AGENDAR CONSULTA</a>
+                    </Link>
                 </div>
             </div>
             <div className="relative flex justify-between items-center py-6 md:py-8">
@@ -54,21 +56,31 @@ export default function Header() {
                 </button>
                 <nav className={`${isNavToggled ? 'block absolute bg-white py-4 z-20 w-full top-20 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32' : 'hidden'} lg:block md:mr-14 lg:mr-18 xl:mr-32`}>
                     <ul aria-label="Primary" role="list" className={`flex flex-col lg:flex-row lg:gap-8 font-medium text-sm text-accent lg:text-custom_gray`}>
-                        <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent" href="/estudio">
-                            <li>El estudio</li>
-                        </a>
-                        <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent" href="/#publicaciones">
-                            <li>Publicaciones</li>
-                        </a>
-                        <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent" href="/#profesionales">
-                            <li>Profesionales</li>
-                        </a>
-                        <a className="py-3 lg:py-0 lg:hover:text-accent" href="/#areas-de-actuacion">
-                            <li>Areas de Actuación</li>
-                        </a>
-                        <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent" href="/contacto">
-                            <li>Contacto</li>
-                        </a>
+                        <Link href="/estudio">
+                            <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent">
+                                <li>El estudio</li>
+                            </a>
+                        </Link>
+                        <Link href="/#publicaciones">
+                            <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent">
+                                <li>Publicaciones</li>
+                            </a>
+                        </Link>
+                        <Link href="/#profesionales">
+                            <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent">
+                                <li>Profesionales</li>
+                            </a>
+                        </Link>
+                        <Link href="/#areas-de-actuacion">
+                            <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent py-3 lg:py-0 lg:hover:text-accent" >
+                                <li>Areas de Actuación</li>
+                            </a>
+                        </Link>
+                        <Link href="/contacto">
+                            <a className="py-3 lg:py-0 lg:hover:text-accent">
+                                <li>Contacto</li>
+                            </a>
+                        </Link>
                     </ul>
                 </nav>
             </div>

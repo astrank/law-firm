@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
     return (
         <footer className="grid grid-rows-2 px-4 gap-14 sm:px-10 md:px-14 lg:px-18 xl:px-32 md:grid-rows-none md:grid-cols-2 md:gap-10 justify-center text-primary bg-darkest text-white py-14">
@@ -5,7 +7,9 @@ export default function Footer() {
                 <h1 className="font-bold text-4xl uppercase">Logo</h1>
                 <p className="text-sm text-gray-400 max-w-md leading-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum. Minus voluptate vitae distinctio aspernatur libero, pariatur amet</p>
                 <div className="flex items-center gap-2">
-                    <a href="/estudio" className="text-sm font-medium text-accent hover:text-accent_light">Saber mas</a>
+                    <Link href="/estudio">
+                        <a className="text-sm font-medium text-accent hover:text-accent_light">Saber mas</a>
+                    </Link>
                     <svg className="h-5 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                     </svg>

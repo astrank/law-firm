@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from 'next/link';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Profesional from "../components/Profesional";
@@ -22,7 +23,7 @@ export default function Home({ posts }) {
 
             <main className={`${!isContentReady ? 'hidden' : 'flex flex-col text-primary'}`}>
                 {/* LANDING */}
-                <section className="relative flex flex-col gap-4 py-28 md:py-36 mb-10">
+                <section className="relative flex flex-col gap-4 py-28 md:py-36">
                     <div className="z-10 flex flex-col gap-6 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32">
                         <div>
                             <span className="text-white font-medium text-base md:text-lg">
@@ -43,9 +44,11 @@ export default function Home({ posts }) {
                             <a href="#publicaciones" className="bg-white text-primary px-5 py-4 md:px-6 rounded self-start">
                                 PUBLICACIONES
                             </a>
-                            <a href="/contacto" className="bg-accent text-white border-b border-accent px-5 py-4 md:px-6 rounded self-start hover:bg-accent_light">
-                                CONSULTAS
-                            </a>
+                            <Link href="/contacto">
+                                <a className="bg-accent text-white border-b border-accent px-5 py-4 md:px-6 rounded self-start hover:bg-accent_light">
+                                    CONSULTAS
+                                </a>
+                            </Link>
                         </div>
                     </div>
                     <Image
@@ -62,7 +65,7 @@ export default function Home({ posts }) {
 
                 {/* AREAS */}
                 <section
-                    className="flex flex-col items-center pt-10 gap-14 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32 mb-10"
+                    className="flex flex-col items-center gap-14 pt-16 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32"
                     id="areas-de-actuacion"
                 >
                     <div>
@@ -163,7 +166,7 @@ export default function Home({ posts }) {
 
                 {/* PROFESIONALES */}
                 <section
-                    className="flex flex-col items-center gap-14 py-10 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32 "
+                    className="flex flex-col items-center gap-14 py-16 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32 "
                     id="profesionales"
                 >
                     <div>
@@ -201,8 +204,8 @@ export default function Home({ posts }) {
                 </section>
 
                 {/* FAQ + CONTACTO */}
-                <div 
-                    className="flex flex-col mb-10 lg:grid lg:grid-cols-2"
+                <section 
+                    className="flex flex-col lg:grid lg:grid-cols-2"
                 >
                     <div className="flex flex-col gap-10 py-10 px-4 md:px-20 bg-primary text-white">
                         <div>
@@ -322,11 +325,11 @@ export default function Home({ posts }) {
                             Realizar consulta
                         </button>
                     </form>
-                </div>
+                </section>
 
                 {/* PUBLICACIONES */}
                 <section
-                    className="flex flex-col gap-14 items-center py-10 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32"
+                    className="flex flex-col gap-14 items-center py-16 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32"
                     id="publicaciones"
                 >
                     <div>
