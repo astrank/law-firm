@@ -13,16 +13,17 @@ export default function Home({ posts }) {
         <div className="font-poppins">
             <Head>
                 <title>Estudio de Abogados</title>
-                <meta name="description" content="Estudio de abogados" />
+                <meta name="description" content="Estudio jurídico de abogados en Rosario." />
                 <link rel="icon" href="/favicon.ico" />
+                <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
             </Head>
 
             <Header />
 
-            <main className={`${!isContentReady ? 'hidden' : 'flex flex-col gap-8 text-primary'}`}>
+            <main className={`${!isContentReady ? 'hidden' : 'flex flex-col text-primary'}`}>
                 {/* LANDING */}
-                <section className="relative flex flex-col gap-4 py-20 md:py-36 mb-10">
-                    <div className="z-10 flex flex-col gap-6 px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32">
+                <section className="relative flex flex-col gap-4 py-28 md:py-36 mb-10">
+                    <div className="z-10 flex flex-col gap-6 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32">
                         <div>
                             <span className="text-white font-medium text-base md:text-lg">
                                 SIRVIENDO EN ROSARIO
@@ -34,18 +35,17 @@ export default function Home({ posts }) {
                                 <hr className="divider mt-2 border-0" />
                             </div>
                         </div>
-                        <p className="text-gray-400 text-sm sm:text-base max-w-md md:max-w-xl leading-7 sm:leading-8">
+                        <p className="text-gray-400 text-sm max-w-sm sm:text-base max-w-md md:max-w-xl leading-7 sm:leading-8">
                             Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sit amet accusantium reprehenderit officia,
-                            voluptatem nesciunt ipsa hic voluptates obcaecati
+                            elit. Sit amet accusantium reprehenderit officia
                         </p>
-                        <div className="flex gap-6 mt-4">
-                            <button className="bg-white text-primary text-sm font-medium px-5 py-4 md:px-6 rounded self-start">
+                        <div className="flex gap-6 mt-4 font-semibold text-sm">
+                            <a href="#publicaciones" className="bg-white text-primary px-5 py-4 md:px-6 rounded self-start">
                                 PUBLICACIONES
-                            </button>
-                            <button className="bg-accent text-white border-b border-accent text-sm font-medium px-5 py-4 md:px-6 rounded self-start hover:bg-accent_light">
+                            </a>
+                            <a href="/contacto" className="bg-accent text-white border-b border-accent px-5 py-4 md:px-6 rounded self-start hover:bg-accent_light">
                                 CONSULTAS
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <Image
@@ -62,14 +62,14 @@ export default function Home({ posts }) {
 
                 {/* AREAS */}
                 <section
-                    className="flex flex-col items-center gap-14 px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32 mb-10"
+                    className="flex flex-col items-center pt-10 gap-14 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32 mb-10"
                     id="areas-de-actuacion"
                 >
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold font-lora">
                             Areas de Actuación
                         </h2>
-                        <hr className="divider mt-2 mx-auto" />
+                        <hr className="divider mt-2 mx-auto border-0" />
                     </div>
                     <div className="grid grid-flow-row lg:grid-cols-3 gap-10 lg:gap-14">
                         <div className="flex flex-col">
@@ -163,14 +163,14 @@ export default function Home({ posts }) {
 
                 {/* PROFESIONALES */}
                 <section
-                    className="flex flex-col items-center gap-14 mb-10 px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32 "
+                    className="flex flex-col items-center gap-14 py-10 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32 "
                     id="profesionales"
                 >
                     <div>
-                        <h1 className="text-2xl md:text-3xl font-bold font-lora">
+                        <h2 className="text-2xl md:text-3xl font-bold font-lora">
                             Profesionales
-                        </h1>
-                        <hr className="divider mt-2 mx-auto" />
+                        </h2>
+                        <hr className="divider mt-2 mx-auto border-0" />
                     </div>
                     <div className="grid grid-rows-4 gap-8 md:grid-rows-none md:grid-cols-2 xl:grid-cols-4">
                         <Profesional
@@ -326,14 +326,14 @@ export default function Home({ posts }) {
 
                 {/* PUBLICACIONES */}
                 <section
-                    className="flex flex-col gap-14 items-center mb-10 m-auto px-4 sm:px-10 md:px-14 lg:px-18 xl:px-32"
+                    className="flex flex-col gap-14 items-center py-10 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32"
                     id="publicaciones"
                 >
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold font-lora">
                             Publicaciones
                         </h2>
-                        <hr className="divider mt-2 mx-auto" />
+                        <hr className="divider mt-2 mx-auto border-0" />
                     </div>
                     <div className="flex flex-col gap-12">
                         {posts && posts.length > 0 &&
@@ -343,7 +343,7 @@ export default function Home({ posts }) {
                                 </>
                             ))}
                     </div>
-                    <a href="#" className="flex self-end gap-2 items-center font-semibold text-sm">
+                    <a href="#" className="flex text-accent hover:text-accent_light self-end gap-2 items-center font-semibold text-sm">
                         Ver todas
                         <svg className="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />

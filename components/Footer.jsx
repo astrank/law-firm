@@ -5,7 +5,7 @@ export default function Footer() {
                 <h1 className="font-bold text-4xl uppercase">Logo</h1>
                 <p className="text-sm text-gray-400 max-w-md leading-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum. Minus voluptate vitae distinctio aspernatur libero, pariatur amet</p>
                 <div className="flex items-center gap-2">
-                    <a href="" className="text-sm font-medium text-accent hover:text-accent_light">Saber mas</a>
+                    <a href="/estudio" className="text-sm font-medium text-accent hover:text-accent_light">Saber mas</a>
                     <svg className="h-5 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                     </svg>
@@ -13,7 +13,7 @@ export default function Footer() {
             </div>      
             <div className="flex flex-col lg:flex-row gap-14 -order-1 md:order-2">
                 <div className="flex flex-col gap-6">
-                    <h3 className="text-lg font-semibold">Contacto</h3>
+                    <h4 className="text-lg font-semibold">Contacto</h4>
                     <div className="flex items-center gap-4">
                         <svg className="h-8 text-accent" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 128C0 92.65 28.65 64 64 64H448C483.3 64 512 92.65 512 128V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V128zM48 128V150.1L220.5 291.7C241.1 308.7 270.9 308.7 291.5 291.7L464 150.1V127.1C464 119.2 456.8 111.1 448 111.1H64C55.16 111.1 48 119.2 48 127.1L48 128zM48 212.2V384C48 392.8 55.16 400 64 400H448C456.8 400 464 392.8 464 384V212.2L322 328.8C283.6 360.3 228.4 360.3 189.1 328.8L48 212.2z"/></svg>
                         <div className="flex flex-col">
