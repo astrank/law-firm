@@ -10,6 +10,7 @@ import { useState } from "react";
 
 export default function Home({ posts }) {
     const [isContentReady, setContentReady] = useState(false);
+
     return (
         <div className="font-poppins">
             <Head>
@@ -85,7 +86,7 @@ export default function Home({ posts }) {
                                 imperdiet.
                             </p>
                             <a href="" className="self-start">
-                                <span className="text-sm font-medium text-accent mr-2">
+                                <span className="text-sm font-medium text-accent mr-2 hover:text-accent_light">
                                     Saber mas
                                 </span>
                                 <svg
@@ -114,7 +115,7 @@ export default function Home({ posts }) {
                                 imperdiet.
                             </p>
                             <a href="" className="self-start">
-                                <span className="text-sm font-medium text-accent mr-2">
+                                <span className="text-sm font-medium text-accent mr-2 hover:text-accent_light">
                                     Saber mas
                                 </span>
                                 <svg
@@ -142,7 +143,7 @@ export default function Home({ posts }) {
                                 adipiscing elit. Quisque rutrum pellentesque.
                             </p>
                             <a href="" className="self-start">
-                                <span className="text-sm font-medium text-accent mr-2">
+                                <span className="text-sm font-medium text-accent mr-2 hover:text-accent_light">
                                     Saber mas
                                 </span>
                                 <svg
@@ -342,7 +343,7 @@ export default function Home({ posts }) {
                         {posts && posts.length > 0 &&
                             posts.slice(-2).map((post, index) => (
                                 <>
-                                    <Publicacion title={post.title} content={post.content} category={post.category} author={post.author} key={4} />
+                                    <Publicacion title={post.title} content={post.content} category={post.category} author={post.author} key={index} />
                                 </>
                             ))}
                     </div>

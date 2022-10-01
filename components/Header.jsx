@@ -2,10 +2,11 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function Header() {
-    const [isNavToggled, setIsNavToggled] = useState(false);
+    const [isNavToggled, toggleNav] = useState(false);
 
     return (
         <header className="text-primary w-full">
+            {/* Top Header */}
             <div className="px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32 flex flex-row justify-between items-center border-b border-gray-200">
                 <div className="flex gap-6 text-sm">
                     <div className="flex items-center gap-2 font-bold">
@@ -44,45 +45,53 @@ export default function Header() {
                     </Link>
                 </div>
             </div>
-            <div className="relative flex justify-between items-center py-6 md:py-8">
+            {/* Main Header */}
+            <div className="header py-6 px-3 sm:px-10 md:py-8 md:px-14 lg:px-18 xl:px-32">
                 <Link href="/">
-                    <a className="text-4xl md:text-5xl font-bold uppercase ml-4 sm:ml-10 md:ml-14 lg:ml-18 xl:ml-32">Home</a>
+                    <a className="text-4xl md:text-5xl font-bold uppercase">Home</a>
                 </Link>
-                <button className="h-6 lg:hidden cursor-pointer mr-4 sm:mr-10 md:mr-14 lg:mr-18 xl:mr-32" aria-expanded="false" aria-label="menu" onClick={() => setIsNavToggled(!isNavToggled)}>
-                    {!isNavToggled &&
-                    <svg aria-hidden="false" className="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>}
-                    {isNavToggled &&
-                    <svg aria-hidden="true" className="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>}
-                </button>
-                <nav className={`${isNavToggled ? 'block absolute bg-white py-4 z-20 w-full top-20 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32' : 'hidden'} lg:block md:mr-14 lg:mr-18 xl:mr-32`}>
-                    <ul aria-label="Primary" role="list" className={`flex flex-col lg:flex-row lg:gap-8 font-medium text-sm text-accent lg:text-custom_gray`}>
-                        <Link href="/estudio">
-                            <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent">
-                                <li>El estudio</li>
-                            </a>
-                        </Link>
-                        <Link href="/#publicaciones">
-                            <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent">
-                                <li>Publicaciones</li>
-                            </a>
-                        </Link>
-                        <Link href="/#profesionales">
-                            <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent">
-                                <li>Profesionales</li>
-                            </a>
-                        </Link>
-                        <Link href="/#areas-de-actuacion">
-                            <a className="border-b border-gray-200 py-3 lg:border-0 lg:py-0 lg:hover:text-accent py-3 lg:py-0 lg:hover:text-accent" >
-                                <li>Areas de Actuación</li>
-                            </a>
-                        </Link>
-                        <Link href="/contacto">
-                            <a className="py-3 lg:py-0 lg:hover:text-accent">
-                                <li>Contacto</li>
-                            </a>
-                        </Link>
+                <nav className={`navbar ${isNavToggled ? 'open' : ''} font-medium text-sm`}>
+                    <ul aria-label="Primary" role="list" className="py-3 px-3 text-accent sm:px-10 md:px-14 lg:px-0 lg:py-0 lg:text-custom_gray">
+                        <li className="py-3 w-full border-b border-gray-200 lg:border-0 lg:w-auto">
+                            <Link href="/estudio">
+                                <a className="">
+                                    El estudio
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="py-3 w-full border-b border-gray-200 lg:border-0 lg:w-auto">
+                            <Link href="/#publicaciones">
+                                <a className="">
+                                    Publicaciones
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="py-3 w-full border-b border-gray-200 lg:border-0 lg:w-auto">
+                            <Link href="/#profesionales">
+                                <a className="">
+                                    Profesionales
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="py-3 w-full border-b border-gray-200 lg:border-0 lg:w-auto">
+                            <Link href="/#areas-de-actuacion">
+                                <a className="">
+                                    Areas de Actuación
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="py-3">
+                            <Link href="/contacto">
+                                <a className="">
+                                    Contacto
+                                </a>
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
+                <button className="hamburger-menu" onClick={() => toggleNav(!isNavToggled)}>
+                    <span aria-hidden="true" className={`${isNavToggled ? 'clicked' : ''} bg-primary after:bg-primary before:bg-primary`}></span>
+                </button>
             </div>
         </header>
     );
