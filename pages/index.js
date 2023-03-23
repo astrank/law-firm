@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Profesional from "../components/Profesional";
@@ -15,14 +15,24 @@ export default function Home({ posts }) {
         <div className="font-poppins">
             <Head>
                 <title>Estudio de Abogados</title>
-                <meta name="description" content="Estudio jurídico de abogados en Rosario." />
+                <meta
+                    name="description"
+                    content="Estudio jurídico de abogados en Rosario."
+                />
                 <link rel="icon" href="/favicon.ico" />
-                <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                ></meta>
             </Head>
 
             <Header />
 
-            <main className={`${!isContentReady ? 'hidden' : 'flex flex-col text-primary'}`}>
+            <main
+                className={`${
+                    !isContentReady ? "hidden" : "flex flex-col text-primary"
+                }`}
+            >
                 {/* LANDING */}
                 <section className="relative flex flex-col gap-4 py-28 md:py-36">
                     <div className="z-10 flex flex-col gap-6 px-3 sm:px-10 md:px-14 lg:px-18 xl:px-32">
@@ -37,12 +47,15 @@ export default function Home({ posts }) {
                                 <hr className="divider mt-2 border-0" />
                             </div>
                         </div>
-                        <p className="text-gray-400 text-sm max-w-sm sm:text-base max-w-md md:max-w-xl leading-7 sm:leading-8">
+                        <p className="text-white text-sm max-w-sm sm:text-base max-w-md md:max-w-xl leading-7 sm:leading-8">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Sit amet accusantium reprehenderit officia
                         </p>
                         <div className="flex gap-6 mt-4 font-semibold text-sm">
-                            <a href="#publicaciones" className="bg-white text-primary px-5 py-4 md:px-6 rounded self-start">
+                            <a
+                                href="#publicaciones"
+                                className="bg-white text-primary px-5 py-4 md:px-6 rounded self-start"
+                            >
                                 PUBLICACIONES
                             </a>
                             <Link href="/contacto">
@@ -54,13 +67,15 @@ export default function Home({ posts }) {
                     </div>
                     <Image
                         className="z-0 animate-fade_in"
-                        src="/assets/images/ali-morshedlou-WMD64tMfc4k-unsplash2.webp"
+                        src="/assets/images/ciudad_shadow.png"
                         layout="fill"
                         objectPosition="right center"
                         objectFit="cover"
                         priority
                         alt="Landing image"
-                        onLoadingComplete={() => setContentReady(!isContentReady)}
+                        onLoadingComplete={() =>
+                            setContentReady(!isContentReady)
+                        }
                     />
                 </section>
 
@@ -205,9 +220,7 @@ export default function Home({ posts }) {
                 </section>
 
                 {/* FAQ + CONTACTO */}
-                <section 
-                    className="flex flex-col lg:grid lg:grid-cols-2"
-                >
+                <section className="flex flex-col lg:grid lg:grid-cols-2">
                     <div className="flex flex-col gap-10 py-10 px-4 md:px-20 bg-primary text-white">
                         <div>
                             <span className="uppercase">¿Tiene dudas?</span>
@@ -340,17 +353,38 @@ export default function Home({ posts }) {
                         <hr className="divider mt-2 mx-auto border-0" />
                     </div>
                     <div className="flex flex-col gap-12">
-                        {posts && posts.length > 0 &&
+                        {posts &&
+                            posts.length > 0 &&
                             posts.slice(-2).map((post, index) => (
                                 <>
-                                    <Publicacion title={post.title} content={post.content} category={post.category} author={post.author} key={index} />
+                                    <Publicacion
+                                        title={post.title}
+                                        content={post.content}
+                                        category={post.category}
+                                        author={post.author}
+                                        key={index}
+                                    />
                                 </>
                             ))}
                     </div>
-                    <a href="#" className="flex text-accent hover:text-accent_light self-end gap-2 items-center font-semibold text-sm">
+                    <a
+                        href="#"
+                        className="flex text-accent hover:text-accent_light self-end gap-2 items-center font-semibold text-sm"
+                    >
                         Ver todas
-                        <svg className="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        <svg
+                            className="h-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                            />
                         </svg>
                     </a>
                 </section>
